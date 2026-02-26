@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Special Song 💖</title>
+
+<style>
+       * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Segoe UI', sans-serif;
+  overflow:hidden;
+}
+
+/* Background slideshow */
+.bg{
+    position:fixed;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    animation:bgFade 15s infinite;
+    filter:brightness(0.55);
+    z-index:-1;
+    height:100vh;
+}
+
+@keyframes bgFade{
+    0%, 32%{
+        background-image:url('pic11.jpeg');
+    }
+    33%, 65%{
+        background-image:url('pic12.jpeg');
+    }
+    66%, 99%{
+        background-image:url('pic13.jpeg');
+    }
+}
+
+/* Center content */
+.wrapper{
+    text-align:center;
+    margin-bottom: 1000px;
+}
+
+/* Song title box */
+.play-btn{
+   align-items: center;
+        margin-bottom: 1000px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            background: #ff4e50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-left: 50px;
+}
+
+
+/* Play button */
+
+.play-btn:active{
+    transform:scale(0.95);
+}
+
+/* Marquee styling (if you want to add later) */
+.marquee-text{
+    width:100%;
+    max-width:420px;
+    margin:auto;
+    font-size:1.5rem;
+    color:red;
+    font-weight:500;
+}
+marquee{
+    scrollamount:2;
+}
+.btn{
+            align-items: center;
+        margin-bottom: 2000px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            background: #ff4e50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-left: 100px;
+        }
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<!-- Audio (mobile-friendly) -->
+<audio id="myAudio" loop>
+    <source src="videooo.mp3" type="audio/mpeg">
+</audio>
+
+<div class="wrapper">
+   
+
+    <button onclick="playSong()" class="play-btn">
+        ▶️ Play Song
+    </button>
+</div>
+ <a href="last.html"><button class="btn"> 
+    Click Next</button></a>
+
+<script>
+function playSong() {
+    const audio = document.getElementById("myAudio");
+    audio.play();
+}
+</script>
+
+</body>
+</html>

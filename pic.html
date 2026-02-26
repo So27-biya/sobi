@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+        
+        .cake{
+            background-image: url(pic1.jpg);
+            background-size: cover;
+            height:600px;
+
+        }
+        .cake video{
+
+        
+         padding-top: 150px;
+         border-radius: 50px;
+         height: 400px;
+         width: 600px;
+         margin-left: 500px;
+        }
+        .btn{
+            align-items: center;
+            margin-top: 80px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            background: #ff4e50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover
+         {
+         transform: scale(1.1);
+         }   
+        </style>
+    </head>
+    <body>
+   
+    <div class="cake">
+    <video  class controls autoplay mute loop>
+        <source src="cake.mp4"></video>
+          <a href="four.html"><center><button class="btn">Click<br>Next</button></center></a>
+    
+    </div>
+    </body>
+</html>
